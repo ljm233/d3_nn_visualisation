@@ -1,6 +1,6 @@
 # d3_nn_visualisation
 
-A D3 project to visualis the training process of a neural network.
+A D3 project to visualise the training process of a neural network.
 
 To run:
 1. clone this repository.
