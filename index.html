@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+    <script src="./data.js"></script>
+    <script src="./model.js"></script>
+    <script src="./ModelGraph.js"></script>
+    <script src="./LineGraph.js"></script>
+    <script src="./funs.js"></script>
+</head>
+
+<style media="screen">
+    .container {
+        position: relative;
+    }
+    #stats {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 10%;
+
+        display: table;
+        table-layout: fixed;
+    }
+    #stats div {
+        display: table-cell;
+        padding: auto;
+    }
+    #nnDiv svg {
+        left: 0;
+    }
+    body {
+        margin: 0;
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+
+<script>
+    $(document).ready(run());
+</script>
+
+<div id="nnDiv" class="container">
+    <div id="stats">
+        <div>Epoch: <span id="epoch_disp">-</span></div>
+        <div>Accuracy: <span id="acc_disp">-</span></div>
+        <div>Loss: <span id="loss_disp">-</span></div>
+    </div>
+    <div id="lossGraph" height="45vh" width="40vw" style="display:block;position:fixed;right:0;top:10vh">
+
+    </div>
+    <div id="accGraph" height="45vh" width="40vw" style="position:fixed;right:0;bottom:0">
+
+    </div>
+</div>
+
+</body>
+</html>
